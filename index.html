@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernTodo - Beautiful Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ModernTodo</div>
+        <div class="nav-links">
+            <button class="nav-btn" id="homeBtn">Home</button>
+            <button class="nav-btn" id="aboutBtn">About</button>
+        </div>
+    </nav>
+
+    <div class="app" id="todoApp">
+        <header class="header">
+            <h1 class="title">Todo</h1>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+            </div>
+        </header>
+
+        <div class="input-section">
+            <div class="input-container">
+                <input type="text" id="todoInput" placeholder="Add a new task..." class="todo-input">
+                <button id="addBtn" class="add-btn">
+                    <span class="add-icon">+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <!-- Todos will be dynamically added here -->
+        </div>
+
+        <div class="stats">
+            <span id="todoCount">0 tasks remaining</span>
+            <button id="clearCompleted" class="clear-btn">Clear completed</button>
+        </div>
+    </div>
+
+    <div class="about-section" id="aboutSection" style="display: none;">
+        <div class="about-content">
+            <h2>About ModernTodo</h2>
+            <p>A sleek, modern todo application built with vanilla JavaScript. Features include:</p>
+            <ul>
+                <li>✨ Beautiful glassmorphism design</li>
+                <li>💾 Local storage persistence</li>
+                <li>🌙 Dark theme interface</li>
+                <li>📱 Fully responsive</li>
+                <li>⚡ Smooth animations</li>
+            </ul>
+            <div class="about-footer">
+                <p>Built with ❤️ using modern web technologies</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
